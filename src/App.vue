@@ -1,11 +1,14 @@
 <script setup>
-import EmployeePage from './components/EmployeePage.vue';
+import NavBar from './components/NavBar.vue'
+import EmployeePage from './components/EmployeePage.vue'
 </script>
 
 <template>
   <div>
-  <EmployeePage></EmployeePage>
+    <NavBar />
+    <EmployeePage />
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+</style>
