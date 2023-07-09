@@ -5,9 +5,7 @@
       <div class="grid-content" v-for="employee in paginatedData" :key="employee.id">
         <img class="img" :src="employee.avatar" alt="Avatar" />
         <h4>{{ employee.first_name }} {{ employee.last_name }}</h4>
-        <!-- <p> -->
         <a :href="'mailto:' + employee.email">{{ employee.email }}</a>
-        <!-- </p> -->
       </div>
     </div>
     <div class="button-container">
@@ -80,7 +78,6 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 10px;
-
   background-color: rgba(157, 217, 217, 0.3);
   border-top-left-radius: 800px;
   border-top-right-radius: 800px;
@@ -118,20 +115,21 @@ export default {
 }
 
 .button {
-  margin: 5px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 10px;
-  border-color: rgb(157, 217, 217);
-  background-color: rgb(157, 217, 217);
-  color: black;
+  background-color: #49aba8;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
   text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px 3px 5px;
+  cursor: pointer;
 }
 
 .button:disabled {
-  background-color: rgb(200, 210, 210);
-  border-color: rgb(200, 210, 210);
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .img {
